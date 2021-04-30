@@ -1,0 +1,29 @@
+<script>
+
+// document.getElementById('sdsd').addEventListener('cc', ()=>{});
+
+var prom = doItAfter(2);
+prom.then((message) => console.log(message))
+ .then(() => console.log('hey hey'))
+ .catch(() => console.log('ошибка'))
+ .then(() => console.log('что-то после ошибки'));
+
+
+// doItAfter(2)
+// .then (() => console.log('hey'))
+// .then (() => console.log('hey hey'));
+ 
+function doItAfter(seconds) {
+    let promise = new Promise((resolve, reject) => {
+          setTimeout(()=>{
+            resolve('lesha');
+        },seconds*1000)
+        
+    });
+
+    return promise;
+}
+
+
+
+</script>
